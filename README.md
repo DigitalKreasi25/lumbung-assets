@@ -6,10 +6,25 @@ Aset logo resmi untuk token **Lumbung (LMB)** di Robinhood Chain (chain ID 4663)
 
 | File | Isi |
 |---|---|
-| `mark_gold_green_512.png` (juga 1024/256/128) | **Logo utama** — glyph lumbung garis emas `#E8B33C` di lingkaran hijau `#0E5A43`, latar transparan. Turunan dari sketsa tangan pilihan pemilik proyek, garis bantu sudah dibuang. |
+| `mark_gold_green_512.png` (juga 1024/256/128) | **Logo utama** — glyph lumbung garis emas `#E8B33C` di lingkaran hijau `#0E5A43`, latar transparan. Turunan dari sketsa tangan pilihan pemilik proyek, garis bantu sudah dibuang. **Sejak 2026-09-17** file 512 px memuat alamat `lumbunglmb.com` di dalam lingkaran (lihat di bawah). |
+| `mark_gold_green_512.original.png` | **Cadangan** logo 512 px sebelum penambahan alamat (md5 `1DB8E83F9D3D8C2E0E46BC09C979467E`) — untuk memulihkan bila perlu |
+| `mark_url_short_*.png` | logo + alamat `lumbunglmb.com` (font terbesar, paling terbaca) |
+| `mark_url_https_*.png` | logo + alamat `https://lumbunglmb.com` (teks lebih kecil) |
+| `square_short_512.png` / `square_https_512.png` | gaya ikon kotak: lingkaran + alamat di bawahnya |
+| `lockup_url_1400x460.png` / `lockup_url_short_1400x460.png` | banner: mark + "LUMBUNG" + alamat situs |
 | `mark_gold_green_bold_64.png` | versi goresan dipertebal, untuk ukuran 64 px ke bawah |
 | `lumbung_logo_512.png` / `lumbung_logo_256.png` | varian vektor rapi (garis tegas), alternatif bila butuh bentuk yang lebih bersih |
 | `lumbung_lockup_1400x460.png` | lockup "LUMBUNG · LMB · Robinhood Chain" untuk dokumen/media sosial |
+
+> Catatan keterbacaan: tulisan alamat di dalam lingkaran **terbaca jelas pada ≥256 px**, mulai kabur di
+> 128 px, dan jadi garis tipis pada 64 px ke bawah. Ukuran file 512 px tetap yang dipakai on-chain.
+
+Kembalikan logo lama (dari folder ini):
+
+```
+copy mark_gold_green_512.original.png mark_gold_green_512.png
+git commit -am "rollback logo" && git push
+```
 
 Palet: harvest gold `#E8B33C` · deep pine green `#0E5A43` · cream `#F6E7C1`.
 
